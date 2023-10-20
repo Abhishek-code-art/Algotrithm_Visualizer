@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Algorithms Visualizer</title>
+    <link rel="stylesheet" href="./css-style/styles.css">
+    <link rel="stylesheet" href="./css-style/tooltip.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
+</head>
+<body oncontextmenu="return false;">
+    <header>
+        <a id="h1" href="../../index.html"><h1>Algorithms Visualizer</h1></a>
+        <div class="algorithms">
+            <a href="../sort/index.html">Sorting</a>
+            <a href="">Graph</a>
+        </div>
+    </header>
+    <main>
+        <div class="control-panel" >
+            <div class="left">
+                <div class="box">
+                    <div class="slider" id="slider_time">
+                      <input id="time_input"type="Range" min="0.5" max="100" value="10" step="0.5" >
+                    </div>
+                    <div class="content" id="content_time_slider">
+                      <label for="time_input">Speed: </label>
+                      <div class="value" id="value_time">100ms</div>
+                    </div>
+                  </div>
+            </div>
+            <div class="right">
+                <div class="upper">
+                    <div class="select">
+                        <select name="format" id="select">
+                            <option selected disabled>Pick an algorithm</option>
+                            <option value="bfs">Breadth-first Search</option>
+                            <option value="dfs">Depth-first Search</option>
+<!--                             <option value="aStar">A*</option>-->
+                             <option value="dijkstra">Dijkstra</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="lower">
+                    <button data-tooltip="Clear canvas" id="clear">
+                        <img src="./css-style/icons/eraser.png" alt="Clear"/>
+                    </button>
+                    <button data-tooltip="Set Start" id="begin">
+                        <img src="./css-style/icons/begin.png" alt="Begin"/>
+                    </button>
+                    <button data-tooltip="Draw Wall" id="wall">
+                        <img src="./css-style/icons/wall.png" alt="Wall"/>
+                    </button>
+                    <button data-tooltip="Set Goal" id="end">
+                        <img src="./css-style/icons/end.png" alt="End"/>
+                    </button>
+                    <button data-tooltip="Run" id="start">
+                        <img src="./css-style/icons/start.png" alt="Start"/>
+                    </button>
+                </div>
+            </div>
+           
+        </div>
+        <div class="warning"> </div>
+        <div class="container">
+            <canvas id="canvas" width="800" height="500"></canvas>
+        </div>
+    </main>
+    <script src="../../dest/graph/code/main.js" type="module" defer></script>
+</body>
+    
+</html>
