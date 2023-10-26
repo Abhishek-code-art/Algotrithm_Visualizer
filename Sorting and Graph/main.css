@@ -429,6 +429,27 @@ section {
   color: black; 
 }
 
+#HuffmanVisualizer {
+  background-color: black;
+}
+
+#HuffmanVisualizer .sort-name {
+  color: white;
+}
+
+#HuffmanVisualizer .sort-definition {
+  color: white;
+}
+
+#HuffmanVisualizer .try-link {
+  background-color: white;
+  color: black;
+}
+
+#HuffmanVisualizer .try-link::after {
+  background-color: rgba(255, 255, 255, 0.635);
+}
+
 
 #back-to-top {
   position: fixed;
@@ -489,7 +510,7 @@ section {
   width: 60%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
 }
 
 .information-logo {
