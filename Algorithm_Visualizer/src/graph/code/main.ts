@@ -9,6 +9,7 @@ import {getEndNode, getSourceNode, getNodeXCoordinates, getNodeYCoordinates} fro
 import {getShortestDistanceBFS} from "./pathFindingAlgorithms/bfs.js";
 import {getPathDFS} from "./pathFindingAlgorithms/dfs.js";
 import createText from "./popup.js";
+import {getPathDijkstra} from "./pathFindingAlgorithms/dijkstra.js";
 
 const canvas = document.getElementById('canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
@@ -17,7 +18,7 @@ const begin = document.getElementById('begin') as HTMLButtonElement;
 const end = document.getElementById('end') as HTMLButtonElement;
 const wall = document.getElementById('wall') as HTMLButtonElement;
 const start = document.getElementById('start') as HTMLButtonElement;
-const select = document.getElementById('select') as HTMLSelectElement;
+const select = document.getElementById('select') as HTMLSelectElement; 
 
 document.querySelector('#slider_time input')!.addEventListener('input', function(this: HTMLInputElement) {
   delay = Number(this.value);
@@ -39,6 +40,7 @@ let prevStart = [-1, -1];
 let isEnd = false;
 let prevEnd = [-1, -1];
 let selectedAlgorithm = '';
+let selectedAlgorithmName = '';
 // console.log(rows, cols);
 
 let adjList: number[][] = [];
@@ -317,21 +319,31 @@ start.addEventListener('click', ()=>{
       if (selectedAlgorithm !== '') {
         switch (selectedAlgorithm) {
             case 'bfs': {
-              getShortestDistanceBFS(adjList, startNode, endNode);matrix[prevStart[0]][prevStart[1]] = 1;
+              if(selectedAlgorithmName == "dj") {
+                getPathDijkstra(adjList, startNode, endNode);
+              } else {
+                getShortestDistanceBFS(adjList, startNode, endNode);matrix[prevStart[0]][prevStart[1]] = 1;
+              }
               break;
             }
+
             case 'dfs': {
               getPathDFS(adjList, startNode, endNode);
               break;
             }
-            // case 'aStar': {getShortestPathAStar(adjList); break;}
-            default: {
-              createText("Please select an algorithm","red");
-              break;
-            }
+
+            // case 'bfs' : {
+            //   getPathDijkstra(adjList, startNode, endNode);
+            //   break;
+            // }
+            
+            // default: {
+            //   createText("Please select an algorithm","red");
+            //   break;
+            // }
         } 
       } else {
-        createText("Please select an algorithms","red");
+        createText("Please select an algorithm","red");
       }
     } else {
        createText('Please set the start and end point',"red");
@@ -339,6 +351,7 @@ start.addEventListener('click', ()=>{
 });
 select.addEventListener('change', (event)=>{
   const target = event.target as HTMLSelectElement;
+  selectedAlgorithmName = target.name;
   selectedAlgorithm = target.value;
   console.log(selectedAlgorithm);
 });
