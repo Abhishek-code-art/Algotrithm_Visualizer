@@ -1,7 +1,7 @@
 import { initPath, delay } from "../main.js";
 // @ts-ignore
 import createText from "../popup.js";
-
+import { delayRender } from "./utility.js";
 // Helper function to find the vertex with the minimum distance value
 export function minDistance(dist: number[], visited: boolean[]) {
     let min = Number.MAX_VALUE;
@@ -35,9 +35,6 @@ export async function getPathDijkstra(adj: number[][], src: number, dest: number
                 prev[w] = u;
             }
         }
-    }
-    async function delayRender(number: number) {
-        
     }
 
     if (dist[dest] === Number.MAX_VALUE) {

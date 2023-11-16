@@ -332,15 +332,6 @@ start.addEventListener('click', ()=>{
               break;
             }
 
-            // case 'bfs' : {
-            //   getPathDijkstra(adjList, startNode, endNode);
-            //   break;
-            // }
-            
-            // default: {
-            //   createText("Please select an algorithm","red");
-            //   break;
-            // }
         } 
       } else {
         createText("Please select an algorithm","red");
