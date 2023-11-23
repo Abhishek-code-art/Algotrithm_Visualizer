@@ -7,7 +7,8 @@ body {
     height: 100%;
     width: 100%;
     font-family: "Gill Sans", sans-serif;
-    background-color: #e3f2fd;
+    background-color: antiquewhite;
+    /* #e3f2fd */
 }
 html {
     height: 100%;
@@ -15,7 +16,7 @@ html {
     font-size: 16px;
 }
 header{
-    background: #5a909c;
+    background: #252D5D;
     width: 100%;
     height: 10%;
     display: flex;
@@ -45,9 +46,9 @@ main{
     text-decoration: none;
     font-family: "Gill Sans", sans-serif;
     font-weight: bold;
-    color: #19A7CE;
+    color: #252D5D;
     font-size: 1.5rem;
-    background-color: #F9FBE7;
+    background-color: #ffffff;
     border-radius: 5px;
 }
 a:hover {
@@ -57,7 +58,7 @@ a:hover {
 }
 h1 {
     font-family: "Gill Sans", sans-serif;
-    color: #F9FBE7;
+    color: #FFFFFF;
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -65,7 +66,8 @@ h1 {
 
 .control-panel{
     position: relative;
-    margin-top: 5px;
+    margin-top: 1em;
+    margin-bottom: 4em;
     height: 20%;
     margin-left: 1vh;
     display: flex; 
@@ -87,7 +89,7 @@ h1 {
 .box .content{
     font-size: 20px;
     font-weight: 300;
-    color: #5a909c;;
+    color: #252D5D;
     display: flex;
     justify-content: center;
   }
@@ -105,7 +107,7 @@ h1 {
     width: 100%;
     -webkit-appearance: none;
     outline: none;
-    background: #f2f2f2;
+    background: #ffffff;
     box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
   }
   
@@ -139,7 +141,7 @@ select {
     align-items: center;
     font-size: 1.4rem;
     font-weight: bold;
-    color: #5a909c;
+    color: #252D5D;
 }
 
 select::-ms-expand {
@@ -168,11 +170,11 @@ select::-ms-expand {
     transition:.25s all ease;
 }
 .select:hover::after {
-color: #7ce8ff;
+color: #252D5D;
 }
   
 button {
-    background: #5a909c;
+    background: #252D5D;
     width: 50px;
     height: 50px;
     padding: 10px 15px;
