@@ -51,7 +51,7 @@ header h1 {
   }
 }
 
-/* .vertical-line1:before {
+.vertical-line1:before {
   content: '';
   position: absolute;
   top: 0;
@@ -74,7 +74,7 @@ header h1 {
   transform: scaleY(0);
   animation: animate1 1.5s forwards;
   animation-fill-mode: forwards;
-} */
+}
 
 @keyframes animate1 {
   0% {
@@ -364,6 +364,8 @@ section {
 
 #bubble-sort {
   background-color: white; 
+  margin-top: 4.7rem;
+  margin-bottom: 4.7rem;
 }
 #bubble-sort .sort-name {
   color: black; 
@@ -393,6 +395,8 @@ section {
 
 #quick-sort {
   background-color: white; 
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 #quick-sort .sort-name {
   color: black; 
@@ -421,7 +425,8 @@ section {
 
 
 #pathfinder {
-  background-color: white; 
+  background-color: white;
+  margin-top: 3.4rem;
 }
 #pathfinder .sort-name {
   color: black; 
