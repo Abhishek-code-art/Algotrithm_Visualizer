@@ -52,7 +52,7 @@ main{
     border-radius: 5px;
 }
 a:hover {
-    color: black;
+    color: rgb(224, 64, 64);
     text-decoration: none;
     cursor: pointer;
 }
@@ -62,7 +62,6 @@ h1 {
     font-size: 2.5rem;
     font-weight: bold;
 }
-
 
 .control-panel{
     position: relative;
@@ -107,7 +106,7 @@ h1 {
     width: 100%;
     -webkit-appearance: none;
     outline: none;
-    background: #ffffff;
+    background: #675e5e;
     box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
   }
   
@@ -170,7 +169,7 @@ select::-ms-expand {
     transition:.25s all ease;
 }
 .select:hover::after {
-color: #252D5D;
+color: #ff0909;
 }
   
 button {
@@ -192,7 +191,7 @@ button {
   }
   button:hover {
     cursor: pointer;
-    box-shadow: 0 0 10px #737b7e;
+    box-shadow: 0 0 10px #f70000;
     opacity: 0.8;
   }
   
@@ -205,7 +204,6 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-
     height: 80%;
     width: 100%;
 }

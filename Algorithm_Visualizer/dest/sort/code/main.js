@@ -4,9 +4,11 @@ import bubbleSort from './sortingAlgorithms/BubbleSort.js';
 import selectionSort from './sortingAlgorithms/SelectionSort.js';
 import insertionSort from './sortingAlgorithms/InsertionSort.js';
 import quickSort from './sortingAlgorithms/QuickSort.js';
-// import mergeSort from './sortingAlgorithms/MergeSort';
+import mergeSort from './sortingAlgorithms/MergeSort.js';
+
 const bookshelfContainer = document.getElementById('bookshelf_container');
 const above = document.getElementById('augmented_container');
+
 //DEFAULT
 const DEFAULT_NUM_BOOKS = 20;
 const DEFAULT_TIMEOUT = 100;
@@ -27,17 +29,19 @@ const sortingBooks = {
         name: 'Quick Sort',
         algo: quickSort,
     },
-    // merge:{
-    //   name: 'Merge Sort',
-    //   algo: mergeSort,
-    // }
+    merge:{
+      name: 'Merge Sort',
+      algo: mergeSort,
+    }
 };
+
 let books = DEFAULT_NUM_BOOKS;
 let bookshelf = [];
 let bookshelfStack = [];
 let timeOut = DEFAULT_TIMEOUT;
 let selectedAlgo = "";
 createBookshelf();
+
 //Add event listeners to DOM elements
 document.getElementById('go-button').addEventListener('click', () => {
     go();
@@ -62,7 +66,13 @@ document.querySelector('#slider_time input').addEventListener('input', function 
 });
 document.getElementById('format').addEventListener('change', function () {
     selectedAlgo = this.value;
+    console.log('Selected Algorithm:', selectedAlgo); // Log the selected algorithm
+    if (selectedAlgo === "") {
+        createText("Please select an algorithm.", "red");
+    }
 });
+
+
 //Helper functions
 function go() {
     const copy = [...bookshelf];
@@ -135,7 +145,7 @@ function visualizeBookshelf(move) {
 function animate(moves) {
     if (moves.length == 0) {
         visualizeBookshelf();
-        createText("The bookshelf is sorted!", "lime");
+        createText("The List is sorted!", "lime");
         featureEnabling(true);
         return;
     }

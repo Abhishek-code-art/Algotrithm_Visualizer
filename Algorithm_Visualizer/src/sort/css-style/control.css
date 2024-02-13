@@ -2,7 +2,7 @@
 
 
 body{
-  background: #E3F2FD;
+  background: rgb(176, 160, 138);
 }
 *{
   font-family: "Gill Sans", sans-serif;
@@ -10,7 +10,7 @@ body{
 }
 
 button {
-  background: #5a909c;
+  background: #252D5D;
   width: 50px;
   height: 50px;
   padding: 10px 15px;
@@ -26,9 +26,10 @@ button {
   align-items: center;
   margin: 2px;
 }
+
 button:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px #737b7e;
+  box-shadow: 0 0 10px #f70000;
   opacity: 0.8;
 }
 
@@ -36,7 +37,6 @@ button img{
   width: 40px;
   height: 40px;
 }
-
 
 .button-box{
   position: relative;
@@ -63,7 +63,7 @@ button img{
 .box .content{
   font-size: 20px;
   font-weight: 300;
-  color: #5a909c;;
+  color: #252D5D;
   display: flex;
   justify-content: center;
 }
@@ -81,7 +81,7 @@ button img{
   width: 100%;
   -webkit-appearance: none;
   outline: none;
-  background: #f2f2f2;
+  background: #675e5e;
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -108,7 +108,7 @@ select {
   align-items: center;
   font-size: 20px;
   font-weight: bold;
-  color: #5a909c;
+    color: #252D5D;
 }
 
 select::-ms-expand {
@@ -137,7 +137,7 @@ select::-ms-expand {
   transition:.25s all ease;
 }
 .select:hover::after {
-  color: #7ce8ff;
+  color: #ff0909;
 }
 
 label{

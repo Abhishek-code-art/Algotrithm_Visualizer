@@ -10,26 +10,25 @@ body{
     justify-content: center;
     margin: 0;
     height: 100vh;
-    background-color: #ffffff;
+    font-family: "Gill Sans", sans-serif;
+    background-color: rgb(234, 187, 125);
 }
 
 header{
-    background: #5a909c;
-
+    background: #252D5D;
     font-family: "Gill Sans", sans-serif;
     color: white;
-    
     height: 10%;
-    width: 100%;
-    
+    width: 100%;  
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 h1 {
     font-size: 40px;
+    color: #FFFFFF;
+    font-size: 2.5rem;
     font-weight: bold;
     font-family: "Gill Sans", sans-serif;
 }
@@ -59,14 +58,14 @@ main{
     font-weight: bold;
     padding: 10px;
     transition: 0.3s;
-    color: #19A7CE;
-    font-size: 25px;
+    color: #252D5D;
     padding: 10px;
-    background-color: #F9FBE7;
+    font-size: 1.5rem;
+    background-color: #73d9de;
     border-radius: 5px;
 }
 .algorithms  > a:hover {
-    color: black;
+    color: rgb(253, 99, 99);
     text-decoration: none;
     cursor: pointer;
 }
