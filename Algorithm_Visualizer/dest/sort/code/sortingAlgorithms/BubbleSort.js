@@ -1,6 +1,6 @@
-export default function selectionSort(bookshelf) {
+export default function bubbleSort(bookshelf) {
     const moves = [];
-    var swapped;
+    let swapped;
     do {
         swapped = false;
         for (let i = 0; i < bookshelf.length - 1; i++) {

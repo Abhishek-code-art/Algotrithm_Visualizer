@@ -9,7 +9,7 @@
   align-items: center;
   font-size: 16px;
   font-weight: bold;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 rgba(105, 206, 229, 0.692), 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 .canvas{
