@@ -1,48 +1,51 @@
 export default function mergeSort(bookshelf) {
     const moves = [];
 
-    const merge = (left, right) => {
-        const result = [];
-        let leftIndex = 0;
-        let rightIndex = 0;
+    const merge = (start, mid, end) => {
+        let start2 = mid+1;
 
-        while (leftIndex < left.length && rightIndex < right.length) {
-            if (left[leftIndex].name < right[rightIndex].name) {
-                result.push(left[leftIndex]);
-                leftIndex++;
+        while(start <= mid && start2 <= end) {
+            if(bookshelf[start].name <= bookshelf[start2].name) {
+                start++;
             } else {
-                result.push(right[rightIndex]);
-                rightIndex++;
+                const value = bookshelf[start2];
+                let index = start2;
+
+                while(index != start) {
+                    bookshelf[index] = bookshelf[index-1];
+                    moves.push({
+                        indices: [index-1, index],
+                        type: "swap"
+                    });
+                    index--;
+                }
+                
+                bookshelf[start] = value;
+                moves.push({
+                    indices: [start],
+                    type: "compare"
+                });
+
+                start++;
+                mid++;
+                start2++;
             }
-        }
-
-        // Push remaining elements from left and right arrays
-        while (leftIndex < left.length) {
-            result.push(left[leftIndex]);
-            leftIndex++;
-        }
-        while (rightIndex < right.length) {
-            result.push(right[rightIndex]);
-            rightIndex++;
-        }
-
-        return result;
+        }  
     };
 
-    const mergeSortRecursive = (array) => {
-        if (array.length <= 1) {
-            return array;
+    const mergeSortRecursive = (left, right) => {
+        if(left < right) {
+            const middle = left + Math.floor((right-left)/2);
+            
+            mergeSortRecursive(left, middle);
+            mergeSortRecursive(middle+1, right);
+            
+            merge(left, middle, right);
         }
-
-        const middle = Math.floor(array.length / 2);
-        const left = array.slice(0, middle);
-        const right = array.slice(middle);
-
-        return merge(mergeSortRecursive(left), mergeSortRecursive(right));
     };
 
-    const sortedBookshelf = mergeSortRecursive(bookshelf);
+    mergeSortRecursive(0, bookshelf.length-1);
     // No moves are being tracked in this implementation
-
-    return sortedBookshelf;
+    return moves;
 }
+ 

@@ -42,6 +42,7 @@ export default function quickSort(bookshelf) {
         quickSortRecursive(left, index - 1);
         quickSortRecursive(index, right);
     };
+    alert("length of bookshelf = " + bookshelf.length);
     quickSortRecursive(0, bookshelf.length - 1);
     return moves;
 }
