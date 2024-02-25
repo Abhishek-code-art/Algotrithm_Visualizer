@@ -19,7 +19,7 @@ export default function mergeSort(bookshelf) {
                     });
                     index--;
                 }
-                
+
                 bookshelf[start] = value;
                 moves.push({
                     indices: [start],
