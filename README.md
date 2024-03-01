@@ -11,4 +11,7 @@ Embark on a journey through drawable mazes to visualize the pathfinding process.
 Delve into the world of data compression with our visualizer. Witness the intricate process of file compression through the lens of Huffman Encoding. Gain insights into optimal data representation, offering a clear understanding of how this compression technique efficiently reduces file sizes. Users can control the visualization speed, providing an educational experience in the principles of data compression.
 
 This Algorithm Visualizer provides an interactive and customizable experience, offering dynamic insights into sorting, various pathfinding algorithms, and file compression techniques. Explore real-world scenarios, making learning both engaging and effective.
+## Website snaps
 ![algo_image](https://github.com/seppm-nishant/Algotrithm_Visualizer/assets/56304052/c5562de0-7643-4aff-87d1-e5631ddf3526)
+![algo_image2](https://github.com/seppm-nishant/Algotrithm_Visualizer/assets/56304052/31a9f1aa-434e-4a18-a005-5d53a282a458)
+![algo_image3](https://github.com/seppm-nishant/Algotrithm_Visualizer/assets/56304052/03dd8d31-e726-4b51-ae16-48afc5ffffea)
