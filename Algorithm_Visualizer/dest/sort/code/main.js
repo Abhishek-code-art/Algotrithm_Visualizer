@@ -5,6 +5,7 @@ import selectionSort from './sortingAlgorithms/SelectionSort.js';
 import insertionSort from './sortingAlgorithms/InsertionSort.js';
 import quickSort from './sortingAlgorithms/QuickSort.js';
 import mergeSort from './sortingAlgorithms/MergeSort.js';
+import heapSort from './sortingAlgorithms/HeapSort.js';
 
 const bookshelfContainer = document.getElementById('bookshelf_container');
 const above = document.getElementById('augmented_container');
@@ -32,7 +33,11 @@ const sortingBooks = {
     merge:{
       name: 'Merge Sort',
       algo: mergeSort,
-    }
+    },
+    heap:{
+        name: 'Heap Sort',
+        algo: heapSort, 
+    },
 };
 
 let books = DEFAULT_NUM_BOOKS;
